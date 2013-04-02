@@ -1,2 +1,14 @@
-<h1>Process#new</h1>
-<p>Find me in app/views/process/new.html.erb</p>
+<h1>Put it on the Side!</h1>
+
+<%= form_tag "/result" do %>
+
+	<%= label_tag :site %>
+	<%= text_field_tag :site %>
+
+      Left <%= radio_button_tag 'side', 'Left' %>
+      Right <%= radio_button_tag 'side', 'Right' %>
+
+	<p>
+	<%= submit_tag "Submit" %>
+<% end %>
+

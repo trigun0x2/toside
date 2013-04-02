@@ -1,6 +1,7 @@
 Toside::Application.routes.draw do
   root to: 'process#new'
-  get "process/new"
+  
+  match '/result',  to: 'process#result'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
