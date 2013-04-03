@@ -1,5 +1,10 @@
 class ProcessController < ApplicationController
   def new
-  	@sites
+  	
   end
+
+  def result
+  	
+  end
+
 end
