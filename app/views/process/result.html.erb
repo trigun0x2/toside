@@ -1,16 +1,28 @@
-<body>
+
 <script type="text/javascript">
 	$(document).ready(function (){
+
+		
+
 		if (<%= escape_javascript(params[:align])%>==0)
-		{
-			$("puthatshit").css("position","absolute");
+		{	
+			$(".container").css("width","95%");
+			$(".thatshit").css("width","40%");
+		}
+		
+		if (<%= escape_javascript(params[:align])%>==0)
+		{	
+			
+			
 		}
 
 		if (<%= escape_javascript(params[:align])%>==2)
 		{
-			$("puthatshit").css("position","absolute");
-			$("puthatshit").css("right","0px");
+			$(".container").css("width","95%");
+			$(".thatshit").css("width","40%");
+			$(".thatshit").css("right","-60%");
 		}
+
 		
 	})
 </script>
@@ -19,5 +31,4 @@
 		<h1><%= @stuff.title %></h1><p>
 		<%= @stuff.content.html_safe %>
 	</div>
-	
-</body>
+
