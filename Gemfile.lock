@@ -79,6 +79,8 @@ GEM
     nokogiri (1.5.9)
     nokogiri (1.5.9-x86-mingw32)
     oauth (0.4.7)
+    pg (0.15.0)
+    pg (0.15.0-x86-mingw32)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -168,6 +170,7 @@ DEPENDENCIES
   factory_girl_rails (= 4.1.0)
   jquery-rails (= 2.0.2)
   nokogiri
+  pg
   rails (= 3.2.13)
   rb-fsevent (= 0.9.1)
   readit
