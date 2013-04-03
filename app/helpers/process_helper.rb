@@ -17,7 +17,6 @@ module ProcessHelper
 				@stuff.content= "No Content on Site"
 			else
 				flash.now[:success] = "Yo SH*T is on the #{params[:side]} side now!"
-				@stuff.content
 			end
 		end
 	end

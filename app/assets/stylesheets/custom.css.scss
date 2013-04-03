@@ -16,10 +16,16 @@ $grayMediumLight: #eaeaea;
 
 html {
   overflow-y: scroll;
+  height: 100%;
 }
 
 body {
   padding-top: 60px;
+  height: 100%;
+}
+
+.thatshit{
+  width: 40%;
 }
 
 section {

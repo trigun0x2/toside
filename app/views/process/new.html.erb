@@ -1,20 +1,38 @@
 <h1>Put That Sh*t on the Side!</h1>
 
 <%= form_tag "/result" do %>
+<script>
+jQuery(function($) {
+  $('div.btn-group[data-toggle-name=*]').each(function(){
+    var group   = $(this);
+    var form    = group.parents('form').eq(0);
+    var name    = group.attr('data-toggle-name');
+    var hidden  = $('input[name="' + name + '"]', form);
+    $('button', group).each(function(){
+      var button = $(this);
+      button.live('click', function(){
+          hidden.val($(this).val());
+      });
+      if(button.val() == hidden.val()) {
+        button.addClass('active');
+      }
+    });
+  });
+});
+</script>
 <center>
 	
 	<%= label_tag :site %>
 	<%= text_field_tag :site %>
 
-	<div class="btn-group" data-toggle="buttons-radio">
-		<button type="button" class="btn btn-primary">Left</button>
-		<button type="button" class="btn btn-primary">Middle</button>
-		<button type="button" class="btn btn-primary">Right</button>
+	<div class="btn-group" data-toggle-name="align" data-toggle="buttons-radio" >
+		<button type="button" value="0" class="btn" data-toggle="button">Left</button>
+		<button type="button" value="1" class="btn" data-toggle="button">Middle</button>
+		<button type="button" value="2" class="btn" data-toggle="button">Right</button>
 	</div>
+<input type="hidden" name="align" value="0" />
 <p><p>
 
-	<%= submit_tag "Submit" %>
-=======
 	<%= submit_tag "Submit", class: "btn btn-large btn-primary"%>
 </center>
 

@@ -1,10 +1,23 @@
 <body>
- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-		<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-		<script src="http://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function (){
+		if (<%= escape_javascript(params[:align])%>==0)
+		{
+			$("puthatshit").css("position","absolute");
+		}
 
-	<puthatshit>
-		<%= read(params[:site]).html_safe %>
-	</puthatshit>
-	<% params[:side] %>
+		if (<%= escape_javascript(params[:align])%>==2)
+		{
+			$("puthatshit").css("position","absolute");
+			$("puthatshit").css("right","0px");
+		}
+		
+	})
+</script>
+	<div class="thatshit">
+		<% read(params[:site]).html_safe %>
+		<h1><%= @stuff.title %></h1><p>
+		<%= @stuff.content.html_safe %>
+	</div>
+	
 </body>
