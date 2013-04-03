@@ -1,14 +1,21 @@
-<h1>Put it on the Side!</h1>
+<h1>Put That Sh*t on the Side!</h1>
 
 <%= form_tag "/result" do %>
-
+<center>
+	
 	<%= label_tag :site %>
 	<%= text_field_tag :site %>
 
-      Left <%= radio_button_tag 'side', 'Left' %>
-      Right <%= radio_button_tag 'side', 'Right' %>
+	<div class="btn-group" data-toggle="buttons-radio">
+		<button type="button" class="btn btn-primary">Left</button>
+		<button type="button" class="btn btn-primary">Middle</button>
+		<button type="button" class="btn btn-primary">Right</button>
+	</div>
+<p><p>
 
-	<p>
-	<%= submit_tag "Submit" %>
+
+
+	<%= submit_tag "Submit", class: "btn btn-large btn-primary"%>
+</center>
 <% end %>
 

@@ -6,11 +6,6 @@ $grayMediumLight: #eaeaea;
 
 
 
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
 @mixin box_sizing {
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
@@ -41,6 +36,17 @@ textarea {
     margin-bottom: 10px;
   }
 }
+.right
+{
+position:absolute;
+right:0px;
+}
+.left
+{
+position:absolute;
+left:0px;
+}
+
 
 /* typography */
 
